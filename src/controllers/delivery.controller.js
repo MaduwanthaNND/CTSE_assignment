@@ -11,6 +11,15 @@ const createDelivery = async(req, res) => {
     }
 }
 
+const getAllDeliveries = async (req, res) => {
+    await Delivery.find({}).then(data => {
+        res.status(200).send({data:data});
+    }).catch(error => {
+        res.status(500).send({error:error.message});
+    });
+} 
+
 module.exports = {
-    createDelivery
+    createDelivery,
+    getAllDeliveries
 };
