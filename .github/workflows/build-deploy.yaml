@@ -8,6 +8,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Run shell script
-      run: echi commit hash is ${{ github.sha }}
+      run: echo commit hash is ${{ github.sha }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:${{ github.sha }}
