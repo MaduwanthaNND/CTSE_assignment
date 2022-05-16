@@ -6,9 +6,12 @@ on:
   workflow_dispatch:
 
 env:
-  DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-  DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-  CLUSTER_NAME: ${{secrets.CLUSTER_NAME}}
+  # DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+  # DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+  # CLUSTER_NAME: ${{secrets.CLUSTER_NAME}}
+  DOCKER_USERNAME: nishanniriella
+  DOCKER_PASSWORD: nishanniriella12345#
+  CLUSTER_NAME: ctse-delivery
 
 jobs:
   product-service:
