@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: server-delivery-pod
+  labels:
+    name: server-delivery-pod
+    app: ctse-app
+
+spec:
+  containers:
+    - name: shop-delivery-pod
+      image: 19980517/ctse-app
+      ports:
+        - containerPort: 8070
