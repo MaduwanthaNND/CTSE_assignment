@@ -6,12 +6,9 @@ on:
   workflow_dispatch:
 
 env:
-  # DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
-  # DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
-  # CLUSTER_NAME: ${{secrets.CLUSTER_NAME}}
-  DOCKER_USERNAME: nishanniriella
-  DOCKER_PASSWORD: nishanniriella12345#
-  CLUSTER_NAME: ctse-delivery
+  DOCKER_USERNAME: ${{secrets.DOCKER_USERNAME}}
+  DOCKER_PASSWORD: ${{secrets.DOCKER_PASSWORD}}
+  CLUSTER_NAME: ${{secrets.CLUSTER_NAME}}
 
 jobs:
   product-service:
@@ -34,9 +31,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@main
       - name: kubectl - Google Cloud GKE cluster.
-        uses: ameydev/gke-kubectl-action@master
+        uses: ameydev/gke-kubectl-action@main
         env:
           PROJECT_ID: ${{ secrets.PROJECT_ID }}
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
