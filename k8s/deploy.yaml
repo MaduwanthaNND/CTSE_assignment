@@ -4,7 +4,7 @@ metadata:
   name: server-delivery-pod
   labels:
     name: server-delivery-pod
-    app: ctse-delivery
+    app: ctse-app
 
 spec:
   containers:
