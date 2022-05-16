@@ -9,6 +9,6 @@ metadata:
 spec:
   containers:
     - name: shop-delivery-pod
-      image: 19980517/ctse-app
+      image: nishanniriella/ctse-delivery
       ports:
         - containerPort: 8070
