@@ -4,11 +4,11 @@ metadata:
   name: server-delivery-pod
   labels:
     name: server-delivery-pod
-    app: ctse-app
+    app: ctse-delivery
 
 spec:
   containers:
     - name: shop-delivery-pod
       image: nishanniriella/ctse-delivery
       ports:
-        - containerPort: 8070
+        - containerPort: 8080
