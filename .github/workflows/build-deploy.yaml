@@ -33,7 +33,7 @@ jobs:
     steps:
       - uses: actions/checkout@main
       - name: kubectl - Google Cloud GKE cluster.
-        uses: ameydev/gke-kubectl-action@main
+        uses: ameydev/gke-kubectl-action@master
         env:
           PROJECT_ID: ${{ secrets.PROJECT_ID }}
           APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
