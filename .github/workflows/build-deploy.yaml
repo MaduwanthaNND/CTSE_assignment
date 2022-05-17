@@ -23,7 +23,7 @@ jobs:
       - name: Docker login
         run: |
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-      - name: Build product service docker image
+      - name: Build delivery service docker image
         run: docker build . --file Dockerfile -t "$DOCKER_USERNAME/$REPO_NAME:latest"
       - name: Push delivery service docker image
         run: docker push "$DOCKER_USERNAME/$REPO_NAME:latest"
